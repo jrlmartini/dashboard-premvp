@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+@theme {
+  --font-outfit: "Outfit", sans-serif;
+
+  --color-conatus-950: #03131e;
+  --color-conatus-900: #214059;
+  --color-conatus-800: #3b5e73;
+  --color-conatus-700: #8f9da7;
+  --color-conatus-600: #c1cdd9;
+  --color-conatus-200: #f2f2f2;
+
+  --color-accent-teal: #34d399;
+  --color-accent-amber: #FBBF24;
+  --color-accent-pink: #fb7185;
+
+  --color-data-blue: #2563c1;
+  --color-data-cyan: #36b5ce;
+  --color-data-teal: #34d399;
+  --color-data-green: #4abe04;
+  --color-data-purple: #8b41b2;
+  --color-data-magenta: #be13cc;
+  --color-data-lavender: #C7c3fe;
+}
+
+:root {
+  --neutral-950: #03131e;
+  --neutral-900: #214059;
+  --neutral-800: #3b5e73;
+  --neutral-700: #8f9da7;
+  --neutral-600: #c1cdd9;
+  --neutral-200: #f2f2f2;
+
+  --accent-teal: #34d399;
+  --accent-amber: #FBBF24;
+  --accent-pink: #fb7185;
+
+  --data-blue: #2563c1;
+  --data-cyan: #36b5ce;
+  --data-teal: #34d399;
+  --data-green: #4abe04;
+  --data-purple: #8b41b2;
+  --data-magenta: #be13cc;
+  --data-lavender: #C7c3fe;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  background-color: var(--neutral-950);
+  color: var(--neutral-200);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Tabular nums for KPI values */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--neutral-950);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--neutral-800);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--neutral-700);
+}
+
+/* Animation keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 300ms ease-out forwards;
+}
